@@ -1,8 +1,16 @@
 ## Put comments here that give an overall description of what your
 ## functions do
+## makeCacheMatrix creates a matrix from a vector of numbers while cacheSolve 
+## creates an inverse of the matrix and then returns that inverse to makeCacheMatrix
 
 ## Write a short comment describing this function
-
+## makeCacheMatrix takes a vector of numbers and creates a matrix out of them.
+## That is if the vector can be squared (e.g. 5x5 or 4x4).
+## It also checks if the vector has changed since last time, checks if there is 
+## already a matrix made out of the vector. The function also checks if the matrix
+## is invertible prior to calling cacheSolve to invert the matrix. Finally it prints
+## the matrix and its inverse as well as notifying if the inverse was fetched from 
+## a cache or calculated. 
 makeCacheMatrix <- function(x = matrix()) {
   #check if vector can be squared, e.g. vector with 25 values, makes 5x5 matrix
   if (all.equal(sqrt(length(vect)),as.integer(sqrt(length(vect)))) == TRUE) {
