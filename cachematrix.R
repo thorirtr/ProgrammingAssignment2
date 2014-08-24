@@ -11,7 +11,7 @@
 ## is invertible prior to calling cacheSolve to invert the matrix. Finally it prints
 ## the matrix and its inverse as well as notifying if the inverse was fetched from 
 ## a cache or calculated. 
-makeCacheMatrix <- function(x = matrix()) {
+makeCacheMatrix <- function(vect = matrix()) {
   #check if vector can be squared, e.g. vector with 25 values, makes 5x5 matrix
   if (all.equal(sqrt(length(vect)),as.integer(sqrt(length(vect)))) == TRUE) {
     # Check if there is older matrix available, if variable doesn't exist 
@@ -49,7 +49,7 @@ makeCacheMatrix <- function(x = matrix()) {
     message("Use call like: makeCacheMatrix(c(3,4,5,6,7,8,3,1,5)")
   }
 }
-}
+##}
 
 
 ## Write a short comment describing this function
